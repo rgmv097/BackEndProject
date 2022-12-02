@@ -1,0 +1,68 @@
+﻿@using Project.Areas.Admin.Models;
+@model EventCreateViewModel
+<div class="content-body">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xl-6 col-xxl-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h4 class="card-title">Create Event</h4>
+                    </div>
+                    <div class="card-body">
+                        <div class="basic-form">
+                            <form class="forms-sample" method="post" asp-action="create" enctype="multipart/form-data">
+                                <div asp-validation-summary="All" class="text-danger"></div>
+                                <div class="form-group">
+                                    <label asp-for="Title" class="text-dark h5">Title</label>
+                                    <input asp-for="Title" class="form-control input-default" placeholder="Title..">
+                                    <span asp-validation-for="Title" class="text-danger font-weight-bold"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label asp-for="Description" class="text-dark h5">Description</label>
+                                    <input asp-for="Description" class="form-control input-default" placeholder="Description..">
+                                    <span asp-validation-for="Description" class="text-danger font-weight-bold"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label asp-for="Venue" class="text-dark h5">Venue</label>
+                                    <input asp-for="Venue" class="form-control input-default" placeholder="Venue..">
+                                    <span asp-validation-for="Venue" class="text-danger font-weight-bold"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label asp-for="SpeakerId" class="text-dark h5">Speakers</label>
+                                    <select asp-for="SpeakerId" asp-items="Model.Speakers" class="form-control"></select>
+                                    <span asp-validation-for="SpeakerId" class="text-danger font-weight-bold"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label asp-for="Image" class="text-dark h5">Event Image</label>
+                                    <input asp-for="Image" class="form-control" accept="image/*">
+                                    <span asp-validation-for="Image" class="text-danger font-weight-bold"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label asp-for="StartTime" class="text-dark h5">Start Time</label>
+                                    <input asp-for="StartTime"
+                                           value="@DateTime.UtcNow.AddHours(4).ToString("yyyy-MM-dd hh:mm")"
+                                           min="@DateTime.UtcNow.AddHours(4).AddDays(1).ToString("yyyy-MM-dd 00:00")"
+                                           max="@DateTime.UtcNow.AddHours(4).AddDays(30).ToString("yyyy-MM-dd 23:59")"
+                                           class="form-control">
+                                    <span asp-validation-for="StartTime" class="text-danger font-weight-bold"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label asp-for="EndTime" class="text-dark h5">End Time</label>
+                                    <input asp-for="EndTime"
+                                           value="@DateTime.UtcNow.AddDays(1).AddHours(4).ToString("yyyy-MM-dd 00:00")"
+                                           min="@DateTime.UtcNow.AddHours(4).AddDays(1).ToString("yyyy-MM-dd 00:00")"
+                                           max="@DateTime.UtcNow.AddHours(4).AddDays(30).ToString("yyyy-MM-dd 23:59")"
+                                           class="form-control">
+                                    <span asp-validation-for="EndTime" class="text-danger font-weight-bold"></span>
+                                </div>
+                                <button type="submit" class="btn-secondary btn-lg px-4">Submit</button>
+                                <button class="btn-dark btn-lg px-4" asp-action="Index">Cancel</button>
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

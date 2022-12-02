@@ -1,0 +1,96 @@
+﻿@using Project.DAL.Entities;
+@model List<Event>
+<div class="content-body">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xl-12 col-xxl-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h4 class="card-title"><u>Events List</u></h4>
+                    </div>
+                    <div class="card-body">
+                        <a class="btn btn-rounded btn-success font-weight-bold" asp-action="create">
+                            <span class="btn-icon-left text-success">
+                                <i class="fa fa-plus color-success"></i>
+                            </span>Add
+                        </a>
+                        <div class="table-responsive mt-3">
+                            <table class="table mb-0">
+                                <thead>
+                                    <tr class="text-dark">
+                                        @if (Model.Count > 0)
+                                        {
+                                            <th>IMG</th>
+                                            <th>Tittle</th>
+                                            <th>Content</th>
+                                            <th>Start - End Time</th>
+                                            <th>Speakers</th>
+                                            <th>IsDeleted</th>
+                                        }
+                                        else
+                                        {
+                                            <th>Events are Empty</th>
+                                        }
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var item in Model)
+                                    {
+                                        <tr>
+                                            <td>
+                                                <div class="round-img">
+                                                    <img width="80" height="50" src="~/img/event/@item.ImageUrl" alt="">
+                                                </div>
+                                            </td>
+                                            @{
+                                                string Title = (item.Title.Length < 15) ? item.Title : item.Title.Substring(0, 15) + "...";
+                                                string Description = (item.Description.Length < 15) ? item.Description : item.Description.Substring(0, 15) + "...";
+                                            }
+                                            <td class="text-dark">@Title</td>
+                                            <td class="text-dark"><span>@Description</span></td>
+
+                                            <td class="text-dark"><span>@item.StartTime.ToString("MM/dd/yyyy HH:mm") <br> @item.EndTime.ToString("MM/dd/yyyy HH:mm") </span></td>
+                                            <td class="text-dark">
+                                                @foreach (var speakers in item.EventSpeakers)
+                                                {
+                                                    <span>@speakers.Speaker.FullName <br /></span>
+
+                                                }
+                                            </td>
+
+                                            @if (!item.IsDeleted)
+                                            {
+                                                <td><span class="badge badge-success text-secondary font-weight-bold">Not Deleted</span></td>
+                                            }
+                                            else
+                                            {
+                                                <td><span class="badge badge-danger text-light">Deleted</span></td>
+                                            }
+                                            <td>
+
+                                                <a class="btn btn-secondary" asp-action="update" asp-route-id="@item.Id">Update</a>
+                                                <div style="display:inline-block">
+                                                    <form class="forms-sample" method="post" asp-action="Delete" asp-route-id="@item.Id">
+                                                        <button type="submit" class="btn btn-danger">
+                                                            Delete
+                                                            <span class="btn-icon-right">
+                                                                <i class="fa fa-close"></i>
+                                                            </span>
+                                                        </button>
+                                                    </form>
+                                                </div>
+                                            </td>
+
+                                        </tr>
+                                    }
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

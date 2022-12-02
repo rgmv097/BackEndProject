@@ -1,0 +1,102 @@
+﻿@using Project.Areas.Admin.Models;
+@model CourseCreateViewModel
+<div class="content-body">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xl-6 col-xxl-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h4 class="card-title">Create Course</h4>
+                    </div>
+                    <div class="card-body">
+                        <div class="basic-form">
+                            <form class="forms-sample" method="post" asp-action="create" enctype="multipart/form-data">
+                                <div asp-validation-summary="All" class="text-danger font-weight-bold"></div>
+                                <div class="form-group">
+                                    <label asp-for="Name" class="text-dark h5">Name</label>
+                                    <input asp-for="Name" class="form-control input-default" placeholder="Name..">
+                                    <span asp-validation-for="Name" class="text-danger font-weight-bold"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label asp-for="Description" class="text-dark h5">Description</label>
+                                    <input asp-for="Description" class="form-control input-default" placeholder="Description..">
+                                    <span asp-validation-for="Description" class="text-danger font-weight-bold"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label asp-for="About" class="text-dark h5">About</label>
+                                    <input asp-for="About" class="form-control input-default" placeholder="About..">
+                                    <span asp-validation-for="About" class="text-danger font-weight-bold"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label asp-for="Apply" class="text-dark h5">Apply</label>
+                                    <input asp-for="Apply" class="form-control input-default" placeholder="Apply..">
+                                    <span asp-validation-for="Apply" class="text-danger font-weight-bold"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label asp-for="Certifiaction" class="text-dark h5">Certifiaction</label>
+                                    <input asp-for="Certifiaction" class="form-control input-default" placeholder="Certifiaction..">
+                                    <span asp-validation-for="Certifiaction" class="text-danger font-weight-bold"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label asp-for="Duration" class="text-dark h5">Duration</label>
+                                    <input asp-for="Duration" class="form-control input-default" placeholder="Duration..">
+                                    <span asp-validation-for="Duration" class="text-danger font-weight-bold"></span>
+                                </div>
+                                 <div class="form-group">
+                                    <label asp-for="ClassDuration" class="text-dark h5">ClassDuration</label>
+                                    <input asp-for="ClassDuration" class="form-control input-default" placeholder="ClassDuration..">
+                                    <span asp-validation-for="ClassDuration" class="text-danger font-weight-bold"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label asp-for="SkillLevel" class="text-dark h5">SkillLevel</label>
+                                    <input asp-for="SkillLevel" class="form-control input-default" placeholder="SkillLevel..">
+                                    <span asp-validation-for="SkillLevel" class="text-danger font-weight-bold"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label asp-for="Language" class="text-dark h5">Language</label>
+                                    <input asp-for="Language" class="form-control input-default" placeholder="Language..">
+                                    <span asp-validation-for="Language" class="text-danger font-weight-bold"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label asp-for="Student" class="text-dark h5">Student</label>
+                                    <input asp-for="Student" class="form-control input-default" placeholder="Student..">
+                                    <span asp-validation-for="Student" class="text-danger font-weight-bold"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label asp-for="Assesments" class="text-dark h5">Assesments</label>
+                                    <input asp-for="Assesments" class="form-control input-default" placeholder="Assesments..">
+                                    <span asp-validation-for="Assesments" class="text-danger font-weight-bold"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label asp-for="Fee" class="text-dark h5">Fee</label>
+                                    <input asp-for="Fee" class="form-control input-default" placeholder="Fee..">
+                                    <span asp-validation-for="Fee" class="text-danger font-weight-bold"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label asp-for="CategoryId" class="text-dark h5">Categories</label>
+                                    <select asp-for="CategoryId" asp-items="Model.Categories" class="form-control"></select>
+                                    <span asp-validation-for="CategoryId" class="text-danger font-weight-bold"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label asp-for="Image" class="text-dark h5">Course Image</label>
+                                    <input asp-for="Image" class="form-control" accept="image/*">
+                                    <span asp-validation-for="Image" class="text-danger font-weight-bold"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label asp-for="StartTime" class="text-dark h5">Start Time</label>
+                                    <input asp-for="StartTime"
+                                           value="@DateTime.UtcNow.AddHours(4).ToString("yyyy-MM-dd hh:mm")"
+                                           min="@DateTime.UtcNow.AddHours(4).AddDays(1).ToString("yyyy-MM-dd 00:00")"
+                                           class="form-control">
+                                    <span asp-validation-for="StartTime" class="text-danger font-weight-bold"></span>
+                                </div>                            
+                                <button type="submit" class="btn-secondary btn-lg px-4">Submit</button>
+                                <button class="btn-dark btn-lg px-4" asp-action="Index">Cancel</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

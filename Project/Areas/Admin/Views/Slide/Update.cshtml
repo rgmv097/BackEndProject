@@ -1,0 +1,43 @@
+﻿@using Project.Areas.Admin.Models;
+@model SlideUpdateViewModel
+<div class="content-body">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xl-6 col-xxl-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h4 class="card-title">Update Slider</h4>
+                        
+                    </div>
+                    <div class="card-body">
+                        <img src="~/img/slider/@Model.ImageName" style="width:150px;height:150px;" />
+                        <div class="basic-form">
+                            <form class="forms-sample" method="post" asp-action="update" enctype="multipart/form-data">
+                                <div asp-validation-summary="ModelOnly" class="text-danger font-weight-bold"></div>
+                                <div class="form-group">
+                                    <label asp-for="Title" class="text-dark h5">Title</label>
+                                    <input asp-for="Title" class="form-control input-default" placeholder="Title..">
+                                    <span asp-validation-for="Title" class="text-danger font-weight-bold"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label asp-for="Subtitle" class="text-dark h5">SubTittle</label>
+                                    <input asp-for="Subtitle" class="form-control input-default" placeholder="SubTitle..">
+                                    <span asp-validation-for="Subtitle" class="text-danger font-weight-bold"></span>
+                                </div>  
+                                <div class="form-group">
+                                    <label asp-for="Image" class="text-dark h5">Slide Image</label>
+                                    <input asp-for="Image" class="form-control" accept="image/*">
+                                    <span asp-validation-for="Image" class="text-danger font-weight-bold"></span>
+                                </div>
+                                <button type="submit" class="btn-secondary btn-lg px-4">Submit</button>
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+

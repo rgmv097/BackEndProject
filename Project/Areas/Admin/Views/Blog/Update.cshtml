@@ -1,0 +1,48 @@
+﻿@using Project.Areas.Admin.Models;
+@model BlogUpdateViewModel
+<div class="content-body">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xl-6 col-xxl-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h4 class="card-title">Update Blog</h4>
+
+                    </div>
+                    <div class="card-body">
+                        <img src="~/img/blog/@Model.ImageUrl" style="width:150px;height:150px;" />
+                        <div class="basic-form">
+                            <form class="forms-sample" method="post" asp-action="update" enctype="multipart/form-data">
+                                <div asp-validation-summary="ModelOnly" class="text-danger font-weight-bold"></div>
+                                <div class="form-group">
+                                    <label asp-for="Title" class="text-dark h5">Title</label>
+                                    <input asp-for="Title" class="form-control input-default" placeholder="Title..">
+                                    <span asp-validation-for="Title" class="text-danger font-weight-bold"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label asp-for="Content" class="text-dark h5">Content</label>
+                                    <input asp-for="Content" class="form-control input-default" placeholder="Content..">
+                                    <span asp-validation-for="Content" class="text-danger font-weight-bold"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label asp-for="Author" class="text-dark h5">Author</label>
+                                    <input asp-for="Author" class="form-control input-default" placeholder="Author..">
+                                    <span asp-validation-for="Author" class="text-danger font-weight-bold"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label asp-for="Image" class="text-dark h5">Blog Image</label>
+                                    <input asp-for="Image" class="form-control" accept="image/*">
+                                    <span asp-validation-for="Image" class="text-danger font-weight-bold"></span>
+                                </div>
+                                <button type="submit" class="btn-secondary btn-lg px-4">Submit</button>
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
