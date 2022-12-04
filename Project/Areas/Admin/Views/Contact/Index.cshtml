@@ -1,0 +1,99 @@
+﻿@using Project.DAL.Entities;
+@model Contact
+<div class="content-body">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xl-8 col-xxl-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h4 class="card-title"><u>Contact</u></h4>
+                    </div>
+                    <div class="card-body">
+                        @if (Model is null)
+                        {
+                            <a class="btn btn-rounded btn-success font-weight-bold" asp-action="create">
+                                <span class="btn-icon-left text-success">
+                                    <i class="fa fa-plus color-success"></i>
+                                </span>Add
+                            </a>
+                        }
+                        else
+                        {
+                            <a class="btn btn-rounded btn-success font-weight-bold" asp-action="update">
+                                <span class="btn-icon-left text-success">
+                                    <i class="fa fa-plus color-success"></i>
+                                </span>Update
+                            </a>
+                        }
+
+
+
+                        <div class="table-responsive mt-3">
+                            <table class="table mb-0">
+                                <thead>
+                                    <tr class="text-dark">
+                                        @if (Model is not null)
+                                        {
+
+                                            <th>Adress</th>
+                                            <th>Phone Number</th>
+                                            <th>Web Site</th>
+
+                                            <th>IsDeleted</th>
+
+                                        }
+                                        else
+                                        {
+                                            <th>Contact are Empty</th>
+
+                                        }
+                                    </tr>
+                                </thead>
+                                <tbody>
+
+                                    @if (Model is not null)
+                                    {
+                                        <tr>
+                                            <td class="text-dark">@Model.Address</td>
+                                            <td class="text-dark">@Model.PhoneNumber</td>
+                                            <td class="text-dark">@Model.WebSite</td>
+
+
+                                            @if (!Model.IsDeleted)
+                                            {
+                                                <td><span class="badge badge-success text-secondary font-weight-bold">Not Deleted</span></td>
+                                            }
+                                            else
+                                            {
+                                                <td><span class="badge badge-danger text-light">Deleted</span></td>
+                                            }
+
+                                            <td>
+
+
+
+                                                <div style="display:inline-block">
+                                                    <form class="forms-sample" method="post" asp-action="Delete" asp-route-id="@Model.Id">
+                                                        <button type="submit" class="btn btn-danger">
+                                                            Delete
+                                                            <span class="btn-icon-right">
+                                                                <i class="fa fa-close"></i>
+                                                            </span>
+                                                        </button>
+                                                    </form>
+                                                </div>
+                                            </td>
+
+
+                                        </tr>
+                                    }
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

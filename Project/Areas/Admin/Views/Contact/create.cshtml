@@ -1,0 +1,39 @@
+﻿@using Project.Areas.Admin.Models;
+@model ContactCreateViewModel
+<div class="content-body">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xl-6 col-xxl-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h4 class="card-title">Create Contact</h4>
+                    </div>
+                    <div class="card-body">
+                        <div class="basic-form">
+                            <form class="forms-sample" method="post" asp-action="Create">
+                                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                                <div class="form-group">
+                                    <label asp-for="Address" class="text-dark h5">Address Name</label>
+                                    <input asp-for="Address" class="form-control input-default" placeholder="Address..">
+                                    <span asp-validation-for="Address" class="text-danger font-weight-bold"></span>
+                                </div> <div class="form-group">
+                                    <label asp-for="PhoneNumber" class="text-dark h5">PhoneNumber</label>
+                                    <input asp-for="PhoneNumber" class="form-control input-default" placeholder="PhoneNumber..">
+                                    <span asp-validation-for="PhoneNumber" class="text-danger font-weight-bold"></span>
+                                </div>
+                                 <div class="form-group">
+                                    <label asp-for="WebSite" class="text-dark h5">WebSite Name</label>
+                                    <input asp-for="WebSite" class="form-control input-default" placeholder="Address..">
+                                    <span asp-validation-for="WebSite" class="text-danger font-weight-bold"></span>
+                                </div>
+                                <button type="submit" class="btn-secondary btn-lg px-4">Submit</button>
+                                <button class="btn-dark btn-lg px-4" asp-action="Index">Cancel</button>
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

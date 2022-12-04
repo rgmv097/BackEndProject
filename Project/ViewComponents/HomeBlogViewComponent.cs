@@ -17,7 +17,10 @@ namespace Project.ViewComponents
         public async Task<IViewComponentResult> InvokeAsync()
         {
 
-            var model = await _dbContext.Blogs.Where(c => !c.IsDeleted).OrderByDescending(c => c.Id).ToListAsync();
+            var model = await _dbContext.Blogs.Where(c => !c.IsDeleted)
+                .Take(3)
+                .OrderByDescending(c => c.Id)
+                .ToListAsync();
             return View(model);
         }
 

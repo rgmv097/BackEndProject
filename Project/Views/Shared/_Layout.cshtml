@@ -76,7 +76,7 @@
                                             <a asp-controller="blog">blog</a>
 
                                         </li>
-                                        <li><a href="contact.html">Contact</a></li>
+                                        <li><a asp-controller="contact">Contact</a></li>
                                         
                                         @if (User.Identity.IsAuthenticated)
                                         {
@@ -211,6 +211,7 @@
     <script src="~/js/plugins.js"></script>
     <script src="~/js/main.js"></script>
     @RenderSection("search", false)
+    @RenderSection("loadmore", false)
 </body>
 
 </html>

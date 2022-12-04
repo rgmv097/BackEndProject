@@ -19,5 +19,6 @@ namespace Project.DAL
         public DbSet<EventSpeaker> EventsSpeakers { get; set; }
         public DbSet<Category> Categories { get; set; }
         public DbSet<Course> Courses { get; set; }
+        public DbSet<Contact> Contacts { get; set; }
     }
 }

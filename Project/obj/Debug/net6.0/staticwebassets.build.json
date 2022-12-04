@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "9BfRtVyR6WuBz/NlyX1+uZ3S5jS4kbr9/w6nA1O1Wcs=",
+  "Hash": "a4hTHDgg9KGvGXzY9Njpd5bVoNvRQP4P6o4HZt+Mq9w=",
   "Source": "Project",
   "BasePath": "_content/Project",
   "Mode": "Default",
@@ -68848,6 +68848,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\img\\banner\\banner.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\rcing\\OneDrive\\İş masası\\Project\\Project\\wwwroot\\img\\blog\\1655133f-fe7f-4889-9c9c-c0c61c58c85e-carousel-1.jpg",
+      "SourceId": "Project",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\rcing\\OneDrive\\İş masası\\Project\\Project\\wwwroot\\",
+      "BasePath": "_content/Project",
+      "RelativePath": "img/blog/1655133f-fe7f-4889-9c9c-c0c61c58c85e-carousel-1.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\blog\\1655133f-fe7f-4889-9c9c-c0c61c58c85e-carousel-1.jpg"
     },
     {
       "Identity": "C:\\Users\\rcing\\OneDrive\\İş masası\\Project\\Project\\wwwroot\\img\\blog\\2f5ee13d-7502-47d0-9625-9744dc36a05c-blog1.jpg",
