@@ -25,6 +25,7 @@ namespace Project.Areas.Admin.Models
         public byte Communication { get; set; }
         [EmailAddress]
         public string Email { get; set; }
+        [Phone]
         public string PhoneNumber { get; set; }
         public string Skype { get; set; }
         public IFormFile Image { get; set; }

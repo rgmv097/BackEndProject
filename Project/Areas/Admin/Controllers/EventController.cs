@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.CodeAnalysis.VisualBasic.Syntax;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using NuGet.DependencyResolver;
 using Project.Areas.Admin.Data;
 using Project.Areas.Admin.Models;
@@ -48,35 +49,26 @@ namespace Project.Areas.Admin.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create(EventCreateViewModel model)
         {
-            if (!ModelState.IsValid) return View();
-
-            if (DateTime.Compare(DateTime.UtcNow.AddHours(4), model.StartTime) >= 0)
+            List<EventSpeaker> eventSpeakers = new List<EventSpeaker>();
+            var speakers = await _dbContext.Speakers.Where(s => !s.IsDeleted).ToListAsync();
+            var eventSpeakersSelectList = new List<SelectListItem>();
+            speakers.ForEach(c => eventSpeakersSelectList
+            .Add(new SelectListItem(c.FullName, c.Id.ToString())));
+            var viewModel = new EventCreateViewModel
             {
-                ModelState.AddModelError("StartTime", "The start time must be later than the current time");
-                return View();
-            }
-
-            if (DateTime.Compare(DateTime.UtcNow.AddHours(4), model.EndTime) >= 0)
-            {
-                ModelState.AddModelError("EndTime", "The end time must be later than the current time");
-                return View();
-            }
-
-            if (DateTime.Compare(model.StartTime, model.EndTime) >= 0)
-            {
-                ModelState.AddModelError("", "The start time must be earlier than the end time");
-                return View();
-            }
+                Speakers = eventSpeakersSelectList
+            };
+            if (!ModelState.IsValid) return View(viewModel);
             if (!model.Image.IsImage())
             {
                 ModelState.AddModelError("Image", "Choose a image format");
-                return View();
+                return View(viewModel);
             }
 
             if (!model.Image.IsAllowedSize(10))
             {
                 ModelState.AddModelError("Image", "The size of the image can be maximum 10 MB");
-                return View();
+                return View(viewModel);
             }
             var unicalFileName = await model.Image.GenerateFile(Constants.EventPath);
 
@@ -88,34 +80,57 @@ namespace Project.Areas.Admin.Controllers
                 StartTime = model.StartTime,
                 EndTime = model.EndTime,
                 Venue = model.Venue,
-
             };
 
-            List<EventSpeaker> eventSpeakers = new List<EventSpeaker>();
-
-            foreach (int speakerId in model.SpeakerId)
+            if (model.SpeakerId.Count > 0)
             {
-                if (!await _dbContext.Speakers.AnyAsync(s => s.Id == speakerId))
+                foreach (int speakerId in model.SpeakerId)
                 {
-                    ModelState.AddModelError("SpeakerId", "Incorrect Speaker");
-                    return View(model);
+                    if (!await _dbContext.Speakers.AnyAsync(s => s.Id == speakerId))
+                    {
+                        ModelState.AddModelError("SpeakerId", "Incorrect Speaker");
+                        return View(model);
+                    }
+
+                    eventSpeakers.Add(new EventSpeaker
+                    {
+                        SpeakerId = speakerId,
+                    });
+
                 }
 
-                eventSpeakers.Add(new EventSpeaker
+                events.EventSpeakers = eventSpeakers;
+            }
+            else
+            {
+                ModelState.AddModelError("", "Pls Select MIN one Speaker");
+                return View(new EventCreateViewModel
                 {
-                    SpeakerId = speakerId,
+                    Speakers = eventSpeakersSelectList,
                 });
 
             }
+            if (DateTime.Compare(DateTime.UtcNow.AddHours(4), model.StartTime) >= 0)
+            {
+                ModelState.AddModelError("StartTime", "The start time must be later than the current time");
+                return View(viewModel);
+            }
 
-            events.EventSpeakers = eventSpeakers;
+            if (DateTime.Compare(DateTime.UtcNow.AddHours(4), model.EndTime) >= 0)
+            {
+                ModelState.AddModelError("EndTime", "The end time must be later than the current time");
+                return View(viewModel);
+            }
+
+            if (DateTime.Compare(model.StartTime, model.EndTime) >= 0)
+            {
+                ModelState.AddModelError("", "The start time must be earlier than the end time");
+                return View(viewModel);
+            }         
 
             await _dbContext.Events.AddAsync(events);
             await _dbContext.SaveChangesAsync();
-
             return RedirectToAction(nameof(Index));
-
-
         }
         public async Task<IActionResult> Delete(int? id)
         {
@@ -125,15 +140,12 @@ namespace Project.Areas.Admin.Controllers
             if (existEvent is null) return NotFound();
             if (existEvent.Id != id) return BadRequest();
             var eventImagePath = Path.Combine(Constants.EventPath, existEvent.ImageUrl);
-
             if (System.IO.File.Exists(eventImagePath))
                 System.IO.File.Delete(eventImagePath);
-
             _dbContext.Events.Remove(existEvent);
             await _dbContext.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
-
         public async Task<IActionResult> Update(int? id)
         {
             if (id is null) return BadRequest();
@@ -141,17 +153,12 @@ namespace Project.Areas.Admin.Controllers
                 .Where(e => !e.IsDeleted && e.Id == id)
                 .Include(es => es.EventSpeakers)
                 .ThenInclude(s => s.Speaker).FirstOrDefaultAsync();
-
             if (existEvent is null) return NotFound();
             var speakers = await _dbContext.Speakers.Where(s => !s.IsDeleted).ToListAsync();
-
             var eventSpeakersSelectList = new List<SelectListItem>();
-
             speakers.ForEach(e => eventSpeakersSelectList
             .Add(new SelectListItem(e.FullName, e.Id.ToString())));
-
             List<EventSpeaker> eventSpeakers = new List<EventSpeaker>();
-
             foreach (EventSpeaker eventSpeaker in existEvent.EventSpeakers)
             {
                 if (!await _dbContext.Speakers.AnyAsync(s => s.Id == eventSpeaker.SpeakerId))
@@ -159,7 +166,6 @@ namespace Project.Areas.Admin.Controllers
                     ModelState.AddModelError("", "Incorect Speaker Id");
                     return View();
                 }
-
                 eventSpeakers.Add(new EventSpeaker
                 {
                     SpeakerId = eventSpeaker.SpeakerId
@@ -186,27 +192,68 @@ namespace Project.Areas.Admin.Controllers
             var existEvent = await _dbContext.Events
                 .Where(e => !e.IsDeleted && e.Id == id)
                 .Include(es => es.EventSpeakers)
-                .ThenInclude(s => s.Speaker).FirstOrDefaultAsync();
+                .ThenInclude(s => s.Speaker)
+                .FirstOrDefaultAsync();
             if (existEvent == null) return NotFound();
-
-            if (!ModelState.IsValid) return View();
-
+            var speakers = await _dbContext.Speakers
+                .Where(s => !s.IsDeleted)
+                .ToListAsync();
+            var eventSpeakersSelectList = new List<SelectListItem>();
+            speakers.ForEach(e => eventSpeakersSelectList
+            .Add(new SelectListItem(e.FullName, e.Id.ToString())));
+            if (model.SpeakerId.Count > 0)
+            {
+                foreach (int speakerId in model.SpeakerId)
+                {
+                    if (!await _dbContext.Speakers.AnyAsync(c => c.Id == speakerId))
+                    {
+                        ModelState.AddModelError("", "Has been selected incorrect speaker.");
+                        return View(new EventUpdateViewModel
+                        {
+                            Speakers = eventSpeakersSelectList
+                        });
+                    }
+                }
+                List<EventSpeaker> eventSpeakers = new List<EventSpeaker>();
+                foreach (var spekarId in model.SpeakerId)
+                {
+                    EventSpeaker eventSpeaker = new EventSpeaker
+                    {
+                        SpeakerId = spekarId
+                    };
+                    eventSpeakers.Add(eventSpeaker);
+                }
+                existEvent.EventSpeakers = eventSpeakers;
+            }
+            else
+            {
+                ModelState.AddModelError("", "Pls Select MIN one Speaker");
+                return View(new EventUpdateViewModel
+                {
+                    Speakers = eventSpeakersSelectList
+                });
+            }
+            var viewModel = new EventUpdateViewModel
+            {
+                Speakers = eventSpeakersSelectList,
+            };
+            if (!ModelState.IsValid) return View(viewModel);
             if (DateTime.Compare(DateTime.UtcNow.AddHours(4), model.StartTime) >= 0)
             {
                 ModelState.AddModelError("StartTime", "The start time must be later than the current time");
-                return View();
+                return View(viewModel);
             }
 
             if (DateTime.Compare(DateTime.UtcNow.AddHours(4), model.EndTime) >= 0)
             {
                 ModelState.AddModelError("EndTime", "The end time must be later than the current time");
-                return View();
+                return View(viewModel);
             }
 
             if (DateTime.Compare(model.StartTime, model.EndTime) >= 0)
             {
                 ModelState.AddModelError("", "The start time must be earlier than the end time");
-                return View();
+                return View(viewModel);
             }
             if (model.Image != null)
             {
@@ -218,6 +265,7 @@ namespace Project.Areas.Admin.Controllers
                     return View(new EventUpdateViewModel
                     {
                         ImageUrl = existEvent.ImageUrl,
+                        Speakers = viewModel.Speakers,
                     });
                 }
 
@@ -228,6 +276,7 @@ namespace Project.Areas.Admin.Controllers
                     return View(new EventUpdateViewModel
                     {
                         ImageUrl = existEvent.ImageUrl,
+                        Speakers=viewModel.Speakers,
                     });
                 }
                 var path = Path.Combine(Constants.EventPath, existEvent.ImageUrl);
@@ -237,62 +286,6 @@ namespace Project.Areas.Admin.Controllers
                 var unicalFileName = await model.Image.GenerateFile(Constants.EventPath);
 
                 existEvent.ImageUrl = unicalFileName;
-            }
-
-            if (model.SpeakerId.Count > 0)
-            {
-                foreach (int speakerId in model.SpeakerId)
-                {
-                    if (!await _dbContext.Speakers.AnyAsync(c => c.Id == speakerId))
-                    {
-                        ModelState.AddModelError("", "Has been selected incorrect speaker.");
-                        return View();
-                    }
-                }
-
-                //_dbContext.EventSpeakers.RemoveRange(dbEvent.EventSpeakers);
-                List<EventSpeaker> eventSpeakers = new List<EventSpeaker>();
-                foreach (var spekarId in model.SpeakerId)
-                {
-                    EventSpeaker eventSpeaker = new EventSpeaker
-                    {
-                        SpeakerId = spekarId
-                    };
-
-                    eventSpeakers.Add(eventSpeaker);
-                }
-                existEvent.EventSpeakers = eventSpeakers;
-            }
-            else
-            {
-                ModelState.AddModelError("", "Pls Select MIN one Speaker");
-                var speakers = await _dbContext.Speakers.Where(s => !s.IsDeleted).ToListAsync();
-
-                var eventSpeakersSelectList = new List<SelectListItem>();
-
-                speakers.ForEach(e => eventSpeakersSelectList
-                .Add(new SelectListItem(e.FullName, e.Id.ToString())));
-
-                List<EventSpeaker> eventSpeakers = new List<EventSpeaker>();
-
-                foreach (EventSpeaker eventSpeaker in existEvent.EventSpeakers)
-                {
-                    if (!await _dbContext.Speakers.AnyAsync(s => s.Id == eventSpeaker.SpeakerId))
-                    {
-                        ModelState.AddModelError("", "Incorect Speaker Id");
-                        return View(model);
-                    }
-
-                    eventSpeakers.Add(new EventSpeaker
-                    {
-                        SpeakerId = eventSpeaker.SpeakerId
-                    });
-                }
-                return View(new EventUpdateViewModel
-                {
-                    Speakers = eventSpeakersSelectList,
-                    SpeakerId = eventSpeakers.Select(s => s.SpeakerId).ToList()
-                });              
             }
             existEvent.Title = model.Title;
             existEvent.Description = model.Description;

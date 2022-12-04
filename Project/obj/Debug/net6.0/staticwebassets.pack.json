@@ -16033,6 +16033,10 @@
       "PackagePath": "staticwebassets\\admin\\webfonts\\fa-v4compatibility.woff2"
     },
     {
+      "Id": "C:\\Users\\rcing\\OneDrive\\İş masası\\Project\\Project\\wwwroot\\css\\all.min.css",
+      "PackagePath": "staticwebassets\\css\\all.min.css"
+    },
+    {
       "Id": "C:\\Users\\rcing\\OneDrive\\İş masası\\Project\\Project\\wwwroot\\css\\animate.css",
       "PackagePath": "staticwebassets\\css\\animate.css"
     },
@@ -16189,12 +16193,16 @@
       "PackagePath": "staticwebassets\\img\\banner\\banner.jpg"
     },
     {
-      "Id": "C:\\Users\\rcing\\OneDrive\\İş masası\\Project\\Project\\wwwroot\\img\\blog\\36697ebf-8841-4fe3-b8d9-dcb1cbfb0915-blog9.jpg",
-      "PackagePath": "staticwebassets\\img\\blog\\36697ebf-8841-4fe3-b8d9-dcb1cbfb0915-blog9.jpg"
+      "Id": "C:\\Users\\rcing\\OneDrive\\İş masası\\Project\\Project\\wwwroot\\img\\blog\\2f5ee13d-7502-47d0-9625-9744dc36a05c-blog1.jpg",
+      "PackagePath": "staticwebassets\\img\\blog\\2f5ee13d-7502-47d0-9625-9744dc36a05c-blog1.jpg"
     },
     {
-      "Id": "C:\\Users\\rcing\\OneDrive\\İş masası\\Project\\Project\\wwwroot\\img\\blog\\b2f6853b-12b1-4977-a164-8241926f1935-blog2.jpg",
-      "PackagePath": "staticwebassets\\img\\blog\\b2f6853b-12b1-4977-a164-8241926f1935-blog2.jpg"
+      "Id": "C:\\Users\\rcing\\OneDrive\\İş masası\\Project\\Project\\wwwroot\\img\\blog\\38ebc489-da2e-4cfa-ae16-b1f592803258-blog2.jpg",
+      "PackagePath": "staticwebassets\\img\\blog\\38ebc489-da2e-4cfa-ae16-b1f592803258-blog2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\rcing\\OneDrive\\İş masası\\Project\\Project\\wwwroot\\img\\blog\\6af64bf6-507b-45d2-9810-41c579350834-blog3.jpg",
+      "PackagePath": "staticwebassets\\img\\blog\\6af64bf6-507b-45d2-9810-41c579350834-blog3.jpg"
     },
     {
       "Id": "C:\\Users\\rcing\\OneDrive\\İş masası\\Project\\Project\\wwwroot\\img\\blog\\blog-detail.jpg",
@@ -16281,10 +16289,6 @@
       "PackagePath": "staticwebassets\\img\\course\\8e06441f-a5aa-491e-a0e9-47f625566a18-blog7.jpg"
     },
     {
-      "Id": "C:\\Users\\rcing\\OneDrive\\İş masası\\Project\\Project\\wwwroot\\img\\course\\bd2dd614-7f85-491c-bac3-adfbea422a33-blog9.jpg",
-      "PackagePath": "staticwebassets\\img\\course\\bd2dd614-7f85-491c-bac3-adfbea422a33-blog9.jpg"
-    },
-    {
       "Id": "C:\\Users\\rcing\\OneDrive\\İş masası\\Project\\Project\\wwwroot\\img\\course\\course-bg.jpg",
       "PackagePath": "staticwebassets\\img\\course\\course-bg.jpg"
     },
@@ -16329,8 +16333,28 @@
       "PackagePath": "staticwebassets\\img\\course\\courses-details.jpg"
     },
     {
+      "Id": "C:\\Users\\rcing\\OneDrive\\İş masası\\Project\\Project\\wwwroot\\img\\course\\dc94892c-cd35-4a7e-b18f-287181feeeb9-blog3.jpg",
+      "PackagePath": "staticwebassets\\img\\course\\dc94892c-cd35-4a7e-b18f-287181feeeb9-blog3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\rcing\\OneDrive\\İş masası\\Project\\Project\\wwwroot\\img\\event\\00e8da22-bdfa-453d-b34f-0c7f5a445408-blog8.jpg",
+      "PackagePath": "staticwebassets\\img\\event\\00e8da22-bdfa-453d-b34f-0c7f5a445408-blog8.jpg"
+    },
+    {
+      "Id": "C:\\Users\\rcing\\OneDrive\\İş masası\\Project\\Project\\wwwroot\\img\\event\\05ea157a-a033-4c01-a1eb-82b945ce6dee-blog8.jpg",
+      "PackagePath": "staticwebassets\\img\\event\\05ea157a-a033-4c01-a1eb-82b945ce6dee-blog8.jpg"
+    },
+    {
+      "Id": "C:\\Users\\rcing\\OneDrive\\İş masası\\Project\\Project\\wwwroot\\img\\event\\0d445742-2ade-4bab-9b1d-894e92e532a7-blog9.jpg",
+      "PackagePath": "staticwebassets\\img\\event\\0d445742-2ade-4bab-9b1d-894e92e532a7-blog9.jpg"
+    },
+    {
       "Id": "C:\\Users\\rcing\\OneDrive\\İş masası\\Project\\Project\\wwwroot\\img\\event\\10d57275-1938-4feb-874e-c1e34a717259-blog8.jpg",
       "PackagePath": "staticwebassets\\img\\event\\10d57275-1938-4feb-874e-c1e34a717259-blog8.jpg"
+    },
+    {
+      "Id": "C:\\Users\\rcing\\OneDrive\\İş masası\\Project\\Project\\wwwroot\\img\\event\\26187a6b-44e8-446e-838e-bbb5823f96a7-category-1.jpg",
+      "PackagePath": "staticwebassets\\img\\event\\26187a6b-44e8-446e-838e-bbb5823f96a7-category-1.jpg"
     },
     {
       "Id": "C:\\Users\\rcing\\OneDrive\\İş masası\\Project\\Project\\wwwroot\\img\\event\\28fdc2e5-16b0-49e9-a95d-f96eabfa0ab8-blog-detail.jpg",
@@ -16341,20 +16365,52 @@
       "PackagePath": "staticwebassets\\img\\event\\29e1478b-7dd9-4dbb-b93f-e7c22e55dcf6-blog3.jpg"
     },
     {
+      "Id": "C:\\Users\\rcing\\OneDrive\\İş masası\\Project\\Project\\wwwroot\\img\\event\\3137ea47-f0bc-4cfa-93cb-88d68e276be0-blog8.jpg",
+      "PackagePath": "staticwebassets\\img\\event\\3137ea47-f0bc-4cfa-93cb-88d68e276be0-blog8.jpg"
+    },
+    {
+      "Id": "C:\\Users\\rcing\\OneDrive\\İş masası\\Project\\Project\\wwwroot\\img\\event\\31d48c08-da37-42bf-b621-80cfd3160ae2-blog9.jpg",
+      "PackagePath": "staticwebassets\\img\\event\\31d48c08-da37-42bf-b621-80cfd3160ae2-blog9.jpg"
+    },
+    {
+      "Id": "C:\\Users\\rcing\\OneDrive\\İş masası\\Project\\Project\\wwwroot\\img\\event\\3c1fe673-ea79-4b4e-9d81-538a286a75a7-blog9.jpg",
+      "PackagePath": "staticwebassets\\img\\event\\3c1fe673-ea79-4b4e-9d81-538a286a75a7-blog9.jpg"
+    },
+    {
+      "Id": "C:\\Users\\rcing\\OneDrive\\İş masası\\Project\\Project\\wwwroot\\img\\event\\5f41c142-2239-4063-b5a2-b487e5fbc85b-blog8.jpg",
+      "PackagePath": "staticwebassets\\img\\event\\5f41c142-2239-4063-b5a2-b487e5fbc85b-blog8.jpg"
+    },
+    {
       "Id": "C:\\Users\\rcing\\OneDrive\\İş masası\\Project\\Project\\wwwroot\\img\\event\\73b4bbcc-4bbe-4a49-8c32-1eb356e8b15c-blog7.jpg",
       "PackagePath": "staticwebassets\\img\\event\\73b4bbcc-4bbe-4a49-8c32-1eb356e8b15c-blog7.jpg"
+    },
+    {
+      "Id": "C:\\Users\\rcing\\OneDrive\\İş masası\\Project\\Project\\wwwroot\\img\\event\\78ffd6c1-162f-475a-8539-8b98e3cb3c91-blog8.jpg",
+      "PackagePath": "staticwebassets\\img\\event\\78ffd6c1-162f-475a-8539-8b98e3cb3c91-blog8.jpg"
     },
     {
       "Id": "C:\\Users\\rcing\\OneDrive\\İş masası\\Project\\Project\\wwwroot\\img\\event\\8a918ea2-6e52-46e0-af1a-c260b6b5b1f4-blog9.jpg",
       "PackagePath": "staticwebassets\\img\\event\\8a918ea2-6e52-46e0-af1a-c260b6b5b1f4-blog9.jpg"
     },
     {
-      "Id": "C:\\Users\\rcing\\OneDrive\\İş masası\\Project\\Project\\wwwroot\\img\\event\\c6c92562-25db-4ce4-91e3-c15de0bf39dc-blog8.jpg",
-      "PackagePath": "staticwebassets\\img\\event\\c6c92562-25db-4ce4-91e3-c15de0bf39dc-blog8.jpg"
+      "Id": "C:\\Users\\rcing\\OneDrive\\İş masası\\Project\\Project\\wwwroot\\img\\event\\91582a35-9691-4aa8-86f7-aedd2a6c5f48-teacher8.jpg",
+      "PackagePath": "staticwebassets\\img\\event\\91582a35-9691-4aa8-86f7-aedd2a6c5f48-teacher8.jpg"
     },
     {
-      "Id": "C:\\Users\\rcing\\OneDrive\\İş masası\\Project\\Project\\wwwroot\\img\\event\\e92ec7f6-b2a4-4eae-9e4e-1e049e2f6e37-blog8.jpg",
-      "PackagePath": "staticwebassets\\img\\event\\e92ec7f6-b2a4-4eae-9e4e-1e049e2f6e37-blog8.jpg"
+      "Id": "C:\\Users\\rcing\\OneDrive\\İş masası\\Project\\Project\\wwwroot\\img\\event\\9a95568a-e543-43e0-8db2-654b6a760480-blog8.jpg",
+      "PackagePath": "staticwebassets\\img\\event\\9a95568a-e543-43e0-8db2-654b6a760480-blog8.jpg"
+    },
+    {
+      "Id": "C:\\Users\\rcing\\OneDrive\\İş masası\\Project\\Project\\wwwroot\\img\\event\\a1de0160-c95a-47f5-8f62-567e2c283de0-teacher7.jpg",
+      "PackagePath": "staticwebassets\\img\\event\\a1de0160-c95a-47f5-8f62-567e2c283de0-teacher7.jpg"
+    },
+    {
+      "Id": "C:\\Users\\rcing\\OneDrive\\İş masası\\Project\\Project\\wwwroot\\img\\event\\d73695d6-f193-487f-a34e-2eda1e7825c6-teacher9.jpg",
+      "PackagePath": "staticwebassets\\img\\event\\d73695d6-f193-487f-a34e-2eda1e7825c6-teacher9.jpg"
+    },
+    {
+      "Id": "C:\\Users\\rcing\\OneDrive\\İş masası\\Project\\Project\\wwwroot\\img\\event\\e370b8e3-9741-43d5-b6e8-78ca8df69686-blog9.jpg",
+      "PackagePath": "staticwebassets\\img\\event\\e370b8e3-9741-43d5-b6e8-78ca8df69686-blog9.jpg"
     },
     {
       "Id": "C:\\Users\\rcing\\OneDrive\\İş masası\\Project\\Project\\wwwroot\\img\\event\\event-details.jpg",
@@ -16557,12 +16613,16 @@
       "PackagePath": "staticwebassets\\img\\slider\\slider3.jpg"
     },
     {
-      "Id": "C:\\Users\\rcing\\OneDrive\\İş masası\\Project\\Project\\wwwroot\\img\\speaker\\6c155743-6d32-4e41-8646-e956df4a1b49-blog1.jpg",
-      "PackagePath": "staticwebassets\\img\\speaker\\6c155743-6d32-4e41-8646-e956df4a1b49-blog1.jpg"
+      "Id": "C:\\Users\\rcing\\OneDrive\\İş masası\\Project\\Project\\wwwroot\\img\\speaker\\59bca7ad-47da-4c0c-b076-5ea65a4519e3-speaker2.jpg",
+      "PackagePath": "staticwebassets\\img\\speaker\\59bca7ad-47da-4c0c-b076-5ea65a4519e3-speaker2.jpg"
     },
     {
-      "Id": "C:\\Users\\rcing\\OneDrive\\İş masası\\Project\\Project\\wwwroot\\img\\speaker\\927053f2-bad7-45ed-82fa-5b8cf54d20e8-blog5.jpg",
-      "PackagePath": "staticwebassets\\img\\speaker\\927053f2-bad7-45ed-82fa-5b8cf54d20e8-blog5.jpg"
+      "Id": "C:\\Users\\rcing\\OneDrive\\İş masası\\Project\\Project\\wwwroot\\img\\speaker\\7577aa0c-270f-4226-99e7-0ba94c1f3533-speaker1.jpg",
+      "PackagePath": "staticwebassets\\img\\speaker\\7577aa0c-270f-4226-99e7-0ba94c1f3533-speaker1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\rcing\\OneDrive\\İş masası\\Project\\Project\\wwwroot\\img\\teacher\\010fb896-f25b-406d-8cfd-3563e2c1734a-teacher7.jpg",
+      "PackagePath": "staticwebassets\\img\\teacher\\010fb896-f25b-406d-8cfd-3563e2c1734a-teacher7.jpg"
     },
     {
       "Id": "C:\\Users\\rcing\\OneDrive\\İş masası\\Project\\Project\\wwwroot\\img\\teacher\\14ac5d9f-4fd7-4524-9653-31c73f9404b1-blog3.jpg",

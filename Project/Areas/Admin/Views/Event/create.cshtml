@@ -11,7 +11,7 @@
                     <div class="card-body">
                         <div class="basic-form">
                             <form class="forms-sample" method="post" asp-action="create" enctype="multipart/form-data">
-                                <div asp-validation-summary="All" class="text-danger"></div>
+                                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
                                 <div class="form-group">
                                     <label asp-for="Title" class="text-dark h5">Title</label>
                                     <input asp-for="Title" class="form-control input-default" placeholder="Title..">

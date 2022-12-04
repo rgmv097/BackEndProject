@@ -10,5 +10,7 @@
         public static string SpeakerPath;
         public static string CoursePath;
 
+        public const string AdminRole = "Admin";
+
     }
 }

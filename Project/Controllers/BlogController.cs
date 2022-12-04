@@ -14,10 +14,9 @@ namespace Project.Controllers
             _dbContext = dbContext;
         }
 
-        public async Task<IActionResult> Index()
+        public IActionResult Index()
         {
-            var blogs = await _dbContext.Blogs.Where(x => !x.IsDeleted).ToListAsync();
-            return View(blogs);
+            return View();
         }
         public async Task<IActionResult> Details(int? id)
         {

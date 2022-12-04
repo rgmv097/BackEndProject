@@ -21,7 +21,7 @@ namespace Project.Areas.Admin.Controllers
 
         public async Task<IActionResult> Index()
         {
-            var Courses = await _dbContext.Courses.Include(c => c.Category).Where(c => !c.IsDeleted).ToListAsync();
+            var Courses = await _dbContext.Courses.Include(c => c.Category).Where(c => !c.IsDeleted).OrderByDescending(x=>x.Id).ToListAsync();
             return View(Courses);
         }
 
@@ -35,7 +35,6 @@ namespace Project.Areas.Admin.Controllers
             categories.ForEach(c => categoriesSelectList.Add(new SelectListItem(c.Name, c.Id.ToString())));
             var model = new CourseCreateViewModel()
             {
-
                 Categories = categoriesSelectList
             };
             return View(model);
@@ -44,41 +43,39 @@ namespace Project.Areas.Admin.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create(CourseCreateViewModel model)
         {
-            var courses = await _dbContext.Courses
-                .Where(c => !c.IsDeleted)
-                .Include(x => x.Category)
-                .ToListAsync();
+            var categories = await  _dbContext.Categories.Where(c => !c.IsDeleted).ToListAsync();
 
-            if (courses is null) return NotFound();
-
-            if (!ModelState.IsValid) return View(model);
+            if (categories is null) return NotFound();
 
             var categoryListItems = new List<SelectListItem>();
 
-            courses.ForEach(x => categoryListItems.Add(new SelectListItem(x.Name, x.Id.ToString())));
+            categories.ForEach(x => categoryListItems.Add(new SelectListItem(x.Name, x.Id.ToString())));
 
             var viewModel = new CourseCreateViewModel()
             {
                 Categories = categoryListItems
             };
 
+            if (!ModelState.IsValid) return View(viewModel);
+            if (DateTime.Compare(DateTime.UtcNow.AddHours(4), model.StartTime) >= 0)
+            {
+                ModelState.AddModelError("StartTime", "The start time must be later than the current time");
+                return View(viewModel);
+            }
 
             if (!model.Image.IsImage())
             {
                 ModelState.AddModelError("Image", "Choose a image format");
-                return View();
+                return View(viewModel);
             }
 
             if (!model.Image.IsAllowedSize(10))
             {
                 ModelState.AddModelError("Image", "The size of the image can be maximum 10 MB");
-                return View();
+                return View(viewModel);
             }
 
             var unicalFileName = await model.Image.GenerateFile(Constants.CoursePath);
-
-
-
             var createdCourse = new Course
             {
                 Name = model.Name,
@@ -95,7 +92,8 @@ namespace Project.Areas.Admin.Controllers
                 SkillLevel = model.SkillLevel,
                 ImageUrl = unicalFileName,
                 CategoryId = model.CategoryId,
-                Language = model.Language,
+                Language = model.Language,   
+                
             };
 
             await _dbContext.Courses.AddAsync(createdCourse);
@@ -143,6 +141,7 @@ namespace Project.Areas.Admin.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Update(int? id, CourseUpdateViewModel model)
         {
+            
             if (id is null) return NotFound();
             var existCourse = await _dbContext.Courses.
                 Where(c => !c.IsDeleted && c.Id == id).
@@ -151,14 +150,21 @@ namespace Project.Areas.Admin.Controllers
             if (existCourse == null) return NotFound();
             var categories = await _dbContext.Categories.Where(c => !c.IsDeleted).ToListAsync();
             if (categories == null) return NotFound();
+           
             var courseCategories = new List<SelectListItem>();
             categories.ForEach(c => courseCategories
             .Add(new SelectListItem(c.Name, c.Id.ToString())));
-
+            var viewModel = new CourseUpdateViewModel
+            {
+                Categories = courseCategories
+            };
+            if (!ModelState.IsValid) return View(viewModel);
+               
+            
             if (DateTime.Compare(DateTime.UtcNow.AddHours(4), model.StartTime) >= 0)
             {
                 ModelState.AddModelError("StartTime", "The start time must be later than the current time");
-                return View(model);
+                return View(viewModel);
             }
             if (model.Image != null)
             {
@@ -167,9 +173,11 @@ namespace Project.Areas.Admin.Controllers
                 {
                     ModelState.AddModelError("Image", "Choose a image format");
 
-                    return View(new EventUpdateViewModel
+                    return View(new CourseUpdateViewModel
                     {
                         ImageUrl = existCourse.ImageUrl,
+                        Categories= courseCategories
+                        
                     });
                 }
 
@@ -177,9 +185,11 @@ namespace Project.Areas.Admin.Controllers
                 {
                     ModelState.AddModelError("Image", "The size of the image can be maximum 10 MB");
 
-                    return View(new EventUpdateViewModel
+                    return View(new CourseUpdateViewModel
                     {
                         ImageUrl = existCourse.ImageUrl,
+                        Categories= courseCategories
+                        
                     });
                 }
                 var path = Path.Combine(Constants.CoursePath, existCourse.ImageUrl);

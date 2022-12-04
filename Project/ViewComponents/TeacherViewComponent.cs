@@ -19,6 +19,7 @@ namespace Project.ViewComponents
             var teachers = _dbContext.Teachers;
 
             if (take == 0)
+
             {
                 return View(await teachers.Where(x => !x.IsDeleted).ToListAsync());
             }

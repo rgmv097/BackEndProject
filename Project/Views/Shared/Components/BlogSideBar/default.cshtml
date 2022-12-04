@@ -1,0 +1,70 @@
+﻿@{
+    BlogSideBarViewModel model = Model;
+    var blogs = model.Blogs;
+    var categories = model.Categories;
+}
+<div class="col-md-4">
+    <div class="blog-sidebar right">
+        <div class="single-blog-widget mb-50">
+            <h3>search</h3>
+            <div class="blog-search">
+                <form id="search" action="#">
+                    <input type="search" placeholder="Search..." name="search" />
+                    <button type="submit">
+                        <span><i class="fa fa-search"></i></span>
+                    </button>
+                </form>
+            </div>
+        </div>
+        <div class="single-blog-widget mb-50">
+            <h3>categories</h3>
+            <ul>
+                @foreach (var category in categories)
+                {
+                    <li><a href="#">@category.Name (@category.Courses.Count)</a></li>
+                }
+
+            </ul>
+        </div>
+        <div class="single-blog-widget mb-50">
+            <div class="single-blog-banner">
+                <a href="blog-details.html" id="blog"><img src="~/img/blog/blog-img.jpg" alt="blog"></a>
+                <h2>best<br> eductaion<br> theme</h2>
+            </div>
+        </div>
+        <div class="single-blog-widget mb-50">
+            <h3>latest post</h3>
+            @foreach (var blog in blogs)
+            {
+                <div class="single-post mb-30">
+                    <div class="single-post-img">
+                        <a asp-controller="blog" asp-action="details" asp-route-id="@blog.Id">
+                            <img style="height:84px;width:95px;" src="~/img/blog/@blog.ImageUrl" alt="post">
+                            <div class="blog-hover">
+                                <i class="fa fa-link"></i>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="single-post-content ">
+                        <h4><a asp-controller="blog" asp-action="details" asp-route-id="@blog.Id">@blog.Title</a></h4>
+                        <p>By @blog.Author  /  @blog.DateTime.ToString("MMMM dd , yyyy")</p>
+                    </div>
+                </div>
+            }
+
+
+
+        </div>
+        <div class="single-blog-widget">
+            <h3>tags</h3>
+            <div class="single-tag">
+                <a href="blog-details.html" class="mr-10 mb-10">course</a>
+                <a href="blog-details.html" class="mr-10 mb-10">education</a>
+                <a href="blog-details.html" class="mb-10">teachers</a>
+                <a href="blog-details.html" class="mr-10">learning</a>
+                <a href="blog-details.html" class="mr-10">university</a>
+                <a href="blog-details.html">events</a>
+            </div>
+        </div>
+    </div>
+</div>

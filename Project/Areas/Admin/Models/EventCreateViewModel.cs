@@ -12,6 +12,6 @@ namespace Project.Areas.Admin.Models
         public string Venue { get; set; }
         public IFormFile Image { get; set; }
         public List<SelectListItem> Speakers { get; set; } = new();
-        public List<int> SpeakerId { get; set; }= new();
+        public List<int> SpeakerId { get; set; } = new();
     }
 }
