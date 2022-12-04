@@ -27,9 +27,9 @@
                 </div>
                 <div class="course-form">
                     <form id="search" action="#">
-                        <input type="search" placeholder="Search..." name="search" />
-                        <button type="submit">search</button>
-                    </form>
+                        <input id="input-search" type="search" placeholder="Search..." name="search" />
+                        <div id="course"></div>
+                    </form>  
                 </div>
             </div>
         </div>
@@ -38,4 +38,23 @@
         </div>
     </div>
 </div>
-<!-- Course End -->
+<
+@section search
+{
+    <script>
+    $(document).on('keyup', '#input-search', function () {
+        var searchedCourse = $(this).val();
+        $("#course").slice(1).remove();
+        $.ajax({
+            method: "POST",
+            url: "/course/search?searchText=" + searchedCourse,
+            success: function (html) {
+                console.log(html);
+
+                $("#Course").append(html);
+            }
+        });
+    })
+    </script>
+
+}

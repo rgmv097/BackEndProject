@@ -1,0 +1,13 @@
+﻿@model List<Course>
+
+<ul>
+    @foreach (var course in Model)
+    {
+            <li>
+                <a asp-controller="course" asp-action="Details" asp-route-id="@course.Id">
+                    <img style="width:100px;height:100px" src="~/img/course/@course.ImageUrl" />
+                    <span style="font-weight:bold">@course.Name</span>
+                </a>
+            </li>
+    }
+</ul>

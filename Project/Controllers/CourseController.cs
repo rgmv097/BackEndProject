@@ -26,5 +26,17 @@ namespace Project.Controllers
             if(course == null) return NotFound();
             return View(course);
         }
+        [HttpPost]
+        public async Task<IActionResult> Search(string searchText)
+        {
+            if (string.IsNullOrEmpty(searchText))
+                return RedirectToAction(nameof(Index));
+
+            var courses = await _dbContext.Courses
+                .Where(c => c.Name.ToLower()
+                .Contains(searchText.ToLower()))
+                .ToListAsync();
+            return PartialView("_SearchedCoursePartialView",courses);
+        }
     }
 }

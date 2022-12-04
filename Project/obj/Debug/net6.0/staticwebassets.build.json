@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "hHmnQ5ZpB/hA2FHX5+f/szBW/ECqxB62YbHm3JDjbsY=",
+  "Hash": "9BfRtVyR6WuBz/NlyX1+uZ3S5jS4kbr9/w6nA1O1Wcs=",
   "Source": "Project",
   "BasePath": "_content/Project",
   "Mode": "Default",
@@ -69732,6 +69732,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\img\\event\\9a95568a-e543-43e0-8db2-654b6a760480-blog8.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\rcing\\OneDrive\\İş masası\\Project\\Project\\wwwroot\\img\\event\\a0f021db-b1a7-480c-97e2-e2ea0fd5ddcb-carousel-2.jpg",
+      "SourceId": "Project",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\rcing\\OneDrive\\İş masası\\Project\\Project\\wwwroot\\",
+      "BasePath": "_content/Project",
+      "RelativePath": "img/event/a0f021db-b1a7-480c-97e2-e2ea0fd5ddcb-carousel-2.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\event\\a0f021db-b1a7-480c-97e2-e2ea0fd5ddcb-carousel-2.jpg"
     },
     {
       "Identity": "C:\\Users\\rcing\\OneDrive\\İş masası\\Project\\Project\\wwwroot\\img\\event\\a1de0160-c95a-47f5-8f62-567e2c283de0-teacher7.jpg",
