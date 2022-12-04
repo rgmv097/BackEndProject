@@ -198,7 +198,13 @@ namespace Project.Areas.Admin.Controllers
             var speakers = await _dbContext.Speakers
                 .Where(s => !s.IsDeleted)
                 .ToListAsync();
+            
             var eventSpeakersSelectList = new List<SelectListItem>();
+            var viewModel = new EventUpdateViewModel
+            {
+                ImageUrl = existEvent.ImageUrl,
+                Speakers = eventSpeakersSelectList,
+            };
             speakers.ForEach(e => eventSpeakersSelectList
             .Add(new SelectListItem(e.FullName, e.Id.ToString())));
             if (model.SpeakerId.Count > 0)
@@ -208,10 +214,7 @@ namespace Project.Areas.Admin.Controllers
                     if (!await _dbContext.Speakers.AnyAsync(c => c.Id == speakerId))
                     {
                         ModelState.AddModelError("", "Has been selected incorrect speaker.");
-                        return View(new EventUpdateViewModel
-                        {
-                            Speakers = eventSpeakersSelectList
-                        });
+                        return View(viewModel);
                     }
                 }
                 List<EventSpeaker> eventSpeakers = new List<EventSpeaker>();
@@ -228,15 +231,8 @@ namespace Project.Areas.Admin.Controllers
             else
             {
                 ModelState.AddModelError("", "Pls Select MIN one Speaker");
-                return View(new EventUpdateViewModel
-                {
-                    Speakers = eventSpeakersSelectList
-                });
+                return View(viewModel);
             }
-            var viewModel = new EventUpdateViewModel
-            {
-                Speakers = eventSpeakersSelectList,
-            };
             if (!ModelState.IsValid) return View(viewModel);
             if (DateTime.Compare(DateTime.UtcNow.AddHours(4), model.StartTime) >= 0)
             {
@@ -262,22 +258,14 @@ namespace Project.Areas.Admin.Controllers
                 {
                     ModelState.AddModelError("Image", "Choose a image format");
 
-                    return View(new EventUpdateViewModel
-                    {
-                        ImageUrl = existEvent.ImageUrl,
-                        Speakers = viewModel.Speakers,
-                    });
+                    return View(viewModel);
                 }
 
                 if (!model.Image.IsAllowedSize(10))
                 {
                     ModelState.AddModelError("Image", "The size of the image can be maximum 10 MB");
 
-                    return View(new EventUpdateViewModel
-                    {
-                        ImageUrl = existEvent.ImageUrl,
-                        Speakers=viewModel.Speakers,
-                    });
+                    return View(viewModel);
                 }
                 var path = Path.Combine(Constants.EventPath, existEvent.ImageUrl);
 

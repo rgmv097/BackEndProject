@@ -53,7 +53,7 @@ namespace Project.Areas.Admin.Controllers
 
             var viewModel = new CourseCreateViewModel()
             {
-                Categories = categoryListItems
+                Categories = categoryListItems,              
             };
 
             if (!ModelState.IsValid) return View(viewModel);
@@ -156,7 +156,8 @@ namespace Project.Areas.Admin.Controllers
             .Add(new SelectListItem(c.Name, c.Id.ToString())));
             var viewModel = new CourseUpdateViewModel
             {
-                Categories = courseCategories
+                Categories = courseCategories,
+                ImageUrl= model.ImageUrl,
             };
             if (!ModelState.IsValid) return View(viewModel);
                
@@ -173,24 +174,14 @@ namespace Project.Areas.Admin.Controllers
                 {
                     ModelState.AddModelError("Image", "Choose a image format");
 
-                    return View(new CourseUpdateViewModel
-                    {
-                        ImageUrl = existCourse.ImageUrl,
-                        Categories= courseCategories
-                        
-                    });
+                    return View(viewModel);
                 }
 
                 if (!model.Image.IsAllowedSize(10))
                 {
                     ModelState.AddModelError("Image", "The size of the image can be maximum 10 MB");
 
-                    return View(new CourseUpdateViewModel
-                    {
-                        ImageUrl = existCourse.ImageUrl,
-                        Categories= courseCategories
-                        
-                    });
+                    return View(viewModel);
                 }
                 var path = Path.Combine(Constants.CoursePath, existCourse.ImageUrl);
 
