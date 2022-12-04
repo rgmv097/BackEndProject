@@ -20,5 +20,7 @@ namespace Project.DAL
         public DbSet<Category> Categories { get; set; }
         public DbSet<Course> Courses { get; set; }
         public DbSet<Contact> Contacts { get; set; }
+        public DbSet<ContactMessage> ContactMessages { get; set; }
+
     }
 }

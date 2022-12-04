@@ -29,14 +29,22 @@ namespace Project.Controllers
        
         public async Task<IActionResult> Search(string searchText)
         {
-            //if (string.IsNullOrEmpty(searchText))
-            //    return RedirectToAction(nameof(Index));
-
+            
             var courses = await _dbContext.Courses
                 .Where(c => c.Name.ToLower()
                 .Contains(searchText.ToLower()))
                 .ToListAsync();
-            return PartialView("_SearchedCoursePartialView",courses);
+            return PartialView("_SearchedCoursePartial",courses);
+        }
+
+        public async Task<IActionResult> Selectcourses(int? id)
+        {
+            if(id is null) return BadRequest();
+            var courses = await _dbContext.Categories
+                .Where(c=>c.Id==id)
+                .Include(c => c.Courses)
+                .ToListAsync();
+            return View(courses);
         }
     }
 }

@@ -45,14 +45,13 @@
     $(document).on('keyup', '#input-search', function () {
         var searchedCourse = $(this).val();
         console.log(searchedCourse)
-        $("#course")
        
         $.ajax({
             method: "GET",
             url: "/course/search?searchText=" + searchedCourse,
             success: function (html) {
                 console.log(html);
-                $("#course").append(html);
+                $("#course").html(html);
             }
         });
     })
