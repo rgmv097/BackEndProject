@@ -4,7 +4,7 @@
     <div class="col-md-4 col-sm-6 col-xs-12">
     <div class="single-blog">
         <div class="blog-img">
-            <a href="blog-details.html"><img src="~/img/blog/@item.ImageUrl" alt="blog"></a>
+                <a asp-controller="blog" asp-action="details" asp-route-id="@item.Id"><img src="~/img/blog/@item.ImageUrl" alt="blog"></a>
             <div class="blog-hover">
                 <a asp-controller="blog" asp-action="details" asp-route-id="@item.Id"><i class="fa fa-link"></i></a>
             </div>

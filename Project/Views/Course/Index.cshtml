@@ -29,7 +29,7 @@
                     <form id="search" action="#">
                         <input id="input-search" type="search" placeholder="Search..." name="search" />
                         <div id="course"></div>
-                    </form>  
+                    </form>
                 </div>
             </div>
         </div>
@@ -38,23 +38,23 @@
         </div>
     </div>
 </div>
-<
-@section search
-{
+@section scripts
+    {
     <script>
-    $(document).on('keyup', '#input-search', function () {
-        var searchedCourse = $(this).val();
-        console.log(searchedCourse)
-       
-        $.ajax({
-            method: "GET",
-            url: "/course/search?searchText=" + searchedCourse,
-            success: function (html) {
-                console.log(html);
-                $("#course").html(html);
-            }
-        });
-    })
+        $(document).on('keyup', '#input-search', function () {
+            var searchedCourse = $(this).val();
+            console.log(searchedCourse)
+
+            $.ajax({
+                method: "GET",
+                url: "/course/search?searchText=" + searchedCourse,
+                success: function (html) {
+                    console.log(html);
+                    $("#course").html(html);
+                }
+            });
+        })
+
     </script>
 
 }

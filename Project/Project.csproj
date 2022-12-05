@@ -17,6 +17,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="wwwroot\img\header\" />
     <Folder Include="wwwroot\img\speaker\" />
   </ItemGroup>
 

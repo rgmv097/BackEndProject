@@ -16045,6 +16045,10 @@
       "PackagePath": "staticwebassets\\css\\bootstrap.min.css"
     },
     {
+      "Id": "C:\\Users\\rcing\\OneDrive\\İş masası\\Project\\Project\\wwwroot\\css\\errorpage.css",
+      "PackagePath": "staticwebassets\\css\\errorpage.css"
+    },
+    {
       "Id": "C:\\Users\\rcing\\OneDrive\\İş masası\\Project\\Project\\wwwroot\\css\\et-line-icon.css",
       "PackagePath": "staticwebassets\\css\\et-line-icon.css"
     },
@@ -16193,16 +16197,16 @@
       "PackagePath": "staticwebassets\\img\\banner\\banner.jpg"
     },
     {
-      "Id": "C:\\Users\\rcing\\OneDrive\\İş masası\\Project\\Project\\wwwroot\\img\\blog\\1655133f-fe7f-4889-9c9c-c0c61c58c85e-carousel-1.jpg",
-      "PackagePath": "staticwebassets\\img\\blog\\1655133f-fe7f-4889-9c9c-c0c61c58c85e-carousel-1.jpg"
-    },
-    {
       "Id": "C:\\Users\\rcing\\OneDrive\\İş masası\\Project\\Project\\wwwroot\\img\\blog\\2f5ee13d-7502-47d0-9625-9744dc36a05c-blog1.jpg",
       "PackagePath": "staticwebassets\\img\\blog\\2f5ee13d-7502-47d0-9625-9744dc36a05c-blog1.jpg"
     },
     {
       "Id": "C:\\Users\\rcing\\OneDrive\\İş masası\\Project\\Project\\wwwroot\\img\\blog\\38ebc489-da2e-4cfa-ae16-b1f592803258-blog2.jpg",
       "PackagePath": "staticwebassets\\img\\blog\\38ebc489-da2e-4cfa-ae16-b1f592803258-blog2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\rcing\\OneDrive\\İş masası\\Project\\Project\\wwwroot\\img\\blog\\61d32dba-622a-4e49-8c07-3ce1944726a7-blog6.jpg",
+      "PackagePath": "staticwebassets\\img\\blog\\61d32dba-622a-4e49-8c07-3ce1944726a7-blog6.jpg"
     },
     {
       "Id": "C:\\Users\\rcing\\OneDrive\\İş masası\\Project\\Project\\wwwroot\\img\\blog\\6af64bf6-507b-45d2-9810-41c579350834-blog3.jpg",
@@ -16489,6 +16493,22 @@
       "PackagePath": "staticwebassets\\img\\event\\speaker2.jpg"
     },
     {
+      "Id": "C:\\Users\\rcing\\OneDrive\\İş masası\\Project\\Project\\wwwroot\\img\\footer\\67031f02-81f3-4561-9530-1e4860ac3b79-carousel-2.jpg",
+      "PackagePath": "staticwebassets\\img\\footer\\67031f02-81f3-4561-9530-1e4860ac3b79-carousel-2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\rcing\\OneDrive\\İş masası\\Project\\Project\\wwwroot\\img\\footer\\9f9979aa-8fc5-4366-89ff-eeee19027b99-logo.png",
+      "PackagePath": "staticwebassets\\img\\footer\\9f9979aa-8fc5-4366-89ff-eeee19027b99-logo.png"
+    },
+    {
+      "Id": "C:\\Users\\rcing\\OneDrive\\İş masası\\Project\\Project\\wwwroot\\img\\footer\\b48a450b-6a55-4726-8993-9a48c5f60efc-carousel-2.jpg",
+      "PackagePath": "staticwebassets\\img\\footer\\b48a450b-6a55-4726-8993-9a48c5f60efc-carousel-2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\rcing\\OneDrive\\İş masası\\Project\\Project\\wwwroot\\img\\footer\\f73472a2-ec1b-4685-8975-652dfee68657-carousel-2.jpg",
+      "PackagePath": "staticwebassets\\img\\footer\\f73472a2-ec1b-4685-8975-652dfee68657-carousel-2.jpg"
+    },
+    {
       "Id": "C:\\Users\\rcing\\OneDrive\\İş masası\\Project\\Project\\wwwroot\\img\\footer\\footer1.jpg",
       "PackagePath": "staticwebassets\\img\\footer\\footer1.jpg"
     },
@@ -16503,6 +16523,22 @@
     {
       "Id": "C:\\Users\\rcing\\OneDrive\\İş masası\\Project\\Project\\wwwroot\\img\\footer\\footer4.jpg",
       "PackagePath": "staticwebassets\\img\\footer\\footer4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\rcing\\OneDrive\\İş masası\\Project\\Project\\wwwroot\\img\\header\\22536c33-8d83-4a6a-bb95-f846bf09e493-carousel-2.jpg",
+      "PackagePath": "staticwebassets\\img\\header\\22536c33-8d83-4a6a-bb95-f846bf09e493-carousel-2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\rcing\\OneDrive\\İş masası\\Project\\Project\\wwwroot\\img\\header\\4476cf81-677e-424c-b478-d89efa24ae8f-logo.png",
+      "PackagePath": "staticwebassets\\img\\header\\4476cf81-677e-424c-b478-d89efa24ae8f-logo.png"
+    },
+    {
+      "Id": "C:\\Users\\rcing\\OneDrive\\İş masası\\Project\\Project\\wwwroot\\img\\header\\e111b608-bb8b-4353-9222-bba37a830ee3-carousel-2.jpg",
+      "PackagePath": "staticwebassets\\img\\header\\e111b608-bb8b-4353-9222-bba37a830ee3-carousel-2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\rcing\\OneDrive\\İş masası\\Project\\Project\\wwwroot\\img\\header\\f837603c-dfb3-4ddd-b95c-ff88281abd05-carousel-2.jpg",
+      "PackagePath": "staticwebassets\\img\\header\\f837603c-dfb3-4ddd-b95c-ff88281abd05-carousel-2.jpg"
     },
     {
       "Id": "C:\\Users\\rcing\\OneDrive\\İş masası\\Project\\Project\\wwwroot\\img\\icon\\section.png",

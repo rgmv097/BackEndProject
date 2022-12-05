@@ -19,7 +19,7 @@
                         }
                         else
                         {
-                            <a class="btn btn-rounded btn-success font-weight-bold" asp-action="update">
+                            <a class="btn btn-rounded btn-success font-weight-bold" asp-action="update" asp-route-id="@Model.Id">
                                 <span class="btn-icon-left text-success">
                                     <i class="fa fa-plus color-success"></i>
                                 </span>Update
@@ -97,3 +97,31 @@
         </div>
     </div>
 </div>
+@section Scripts{
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script>
+        let btns = document.querySelectorAll(".forms-sample")
+        btns.forEach(btn =>
+            btn.addEventListener("submit", function (event) {
+                event.preventDefault();
+                swal({
+                    title: "Are you sure?",
+                    text: "Once deleted, you will not be able to recover this imaginary file!",
+                    icon: "warning",
+                    buttons: true,
+                    dangerMode: true,
+                })
+                    .then((willDelete) => {
+                        if (willDelete) {
+                            btn.submit(),
+                                swal("Poof! Your imaginary file has been deleted!", {
+                                    icon: "success",
+                                });
+                        }
+                        else {
+                            swal("Your imaginary file is safe!");
+                        }
+                    });
+            }));
+    </script>
+}

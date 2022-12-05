@@ -21,6 +21,9 @@ namespace Project.DAL
         public DbSet<Course> Courses { get; set; }
         public DbSet<Contact> Contacts { get; set; }
         public DbSet<ContactMessage> ContactMessages { get; set; }
+        public DbSet<Settings> Settings { get; set; }
+        public DbSet<FooterInformation> FooterInformations { get; set; }
+        public DbSet<FooterUseful> FooterUsefuls { get; set; }
 
     }
 }

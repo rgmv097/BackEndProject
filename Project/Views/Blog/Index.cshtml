@@ -19,7 +19,7 @@
 <div class="blog-area pt-150 pb-150">
     <div class="container">
         <div class="row" id="blogRows">
-            <input type="hidden" id="blogVount" value="@ViewBag.blogCount" />
+            <input type="hidden" id="blogCount" value="@ViewBag.blogCount" />
             <partial name="_BlogPartial" model="Model" />
         </div>
         <div style="text-align:center; margin-top:50px;">
@@ -28,7 +28,7 @@
     </div>
 </div>
 <!-- Blog End -->
-@section loadmore{
+@section scripts{
 
     <script>
 
@@ -43,9 +43,9 @@
                         $("#blogRows").append(html);
                         skip += 4;
 
-                        var productCount = $("#blogRows").val();
+                        var blogCount = $("#blogRows").val();
 
-                        if (skip >= productCount)
+                        if (skip >= blogCount)
                             $("#loadMore").remove();
                     }
                 });

@@ -130,7 +130,7 @@
                             <li><a asp-area="default" asp-controller="teacher">Teacher</a></li>
                             <li><a asp-area="default" asp-controller="blog">Blog</a></li>
                             <li><a asp-area="default" asp-controller="Contact">Contact</a></li>
-                            
+
                         </ul>
                     </li>
                     <li class="nav-label">Controllers</li>
@@ -196,12 +196,23 @@
                         </a>
                         <ul aria-expanded="false">
                             <li><a asp-controller="contact" asp-action="index">Contact</a></li>
-                            
+
+                        </ul>
+                    </li>
+                    <li>
+                        <a class="has-arrow" href="javascript:void()" aria-expanded="false">
+                            <i class="fa-solid fa-gears"></i><span class="nav-text">Settings</span>
+                        </a>
+                        <ul aria-expanded="false">
+                            <li><a asp-controller="settings" asp-action="index">Settings</a></li>
+                            <li><a asp-controller="information" asp-action="index">Informations Link</a></li>
+                            <li><a asp-controller="useful" asp-action="index">Usefulls Link</a></li>
+
                         </ul>
                     </li>
 
 
-                   
+
                 </ul>
             </div>
 
@@ -236,6 +247,7 @@
     <script src="~/admin/vendor/global/global.min.js"></script>
     <script src="~/admin/js/quixnav-init.js"></script>
     <script src="~/admin/js/custom.min.js"></script>
+   
 
 
     <!-- Vectormap -->
@@ -259,9 +271,10 @@
     <script src="~/admin/vendor/jqvmap/js/jquery.vmap.min.js"></script>
     <script src="~/admin/vendor/jqvmap/js/jquery.vmap.usa.js"></script>
     <script src="~/admin/vendor/jquery.counterup/jquery.counterup.min.js"></script>
-
+    @RenderSection("scripts", false)
 
     <script src="~/admin/js/dashboard/dashboard-1.js"></script>
+
 
 </body>
 

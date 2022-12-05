@@ -40,6 +40,8 @@ namespace Project
             Constants.SpeakerPath = Path.Combine(Constants.RootPath, "img", "speaker");
             Constants.EventPath = Path.Combine(Constants.RootPath, "img", "event");
             Constants.CoursePath = Path.Combine(Constants.RootPath, "img", "course");
+            Constants.HeaderPath = Path.Combine(Constants.RootPath, "img", "header");
+            Constants.FooterPath = Path.Combine(Constants.RootPath, "img", "footer");
 
 
             var app = builder.Build();
@@ -65,6 +67,7 @@ namespace Project
             app.UseRouting();
             app.UseAuthentication();
             app.UseAuthorization();
+            app.UseStatusCodePagesWithReExecute("/ErrorPages/Error", "?code={0}");
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllerRoute(

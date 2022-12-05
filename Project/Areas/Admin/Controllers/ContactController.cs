@@ -65,6 +65,8 @@ namespace Project.Areas.Admin.Controllers
             });
         }
 
+        [HttpPost]
+        [ValidateAntiForgeryToken]
         public async Task<IActionResult> Update(int? id, ContactUpdateViewModel model)
         {
             if (!ModelState.IsValid) return View(model);
