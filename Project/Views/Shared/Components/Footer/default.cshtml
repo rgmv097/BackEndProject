@@ -4,100 +4,102 @@
     var useful = model.FooterUsefuls;
     var information = model.FooterInformations;
 }
+@if (setting != null)
+{
+    <footer class="footer-area">
+        <div class="main-footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 col-sm-6 col-xs-12">
+                        <div class="single-widget pr-60">
+                            <div class="footer-logo pb-25">
+                                <a asp-controller="home" asp-action="index"><img src="~/img/header/@setting.HeaderLogoUrl" alt="eduhome"></a>
+                            </div>
+                            @if (setting.FooterDescription is not null)
+                            {
+                                <p>@setting.FooterDescription</p>
+                            }
+                            <div class="footer-social">
+                                <ul>
+                                    @if (setting.Facebook is not null)
+                                    {
+                                        <li><a href="@setting.Facebook"><i class="zmdi zmdi-facebook"></i></a></li>
+                                    }
+                                    @if (setting.Pinterest is not null)
+                                    {
+                                        <li><a href="@setting.Pinterest"><i class="zmdi zmdi-pinterest"></i></a></li>
+                                    }
+                                    @if (setting.Viber is not null)
+                                    {
+                                        <li><a href="@setting.Viber"><i class="zmdi zmdi-vimeo"></i></a></li>
+                                    }
+                                    @if (setting.Twitter is not null)
+                                    {
+                                        <li><a href="@setting.Twitter"><i class="zmdi zmdi-twitter"></i></a></li>
+                                    }
 
-<footer class="footer-area">
-    <div class="main-footer">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4 col-sm-6 col-xs-12">
-                    <div class="single-widget pr-60">
-                        <div class="footer-logo pb-25">
-                            <a asp-controller="home" asp-action="index"><img src="~/img/header/@setting.HeaderLogoUrl" alt="eduhome"></a>
+
+                                </ul>
+                            </div>
                         </div>
-                        @if (setting.FooterDescription is not null)
-                        {
-                            <p>@setting.FooterDescription</p>
-                        }
-                        <div class="footer-social">
+                    </div>
+                    <div class="col-md-3 col-sm-6 col-xs-12">
+                        <div class="single-widget">
+                            <h3>information</h3>
                             <ul>
-                                @if (setting.Facebook is not null)
+                                @foreach (var item in information)
                                 {
-                                    <li><a href="@setting.Facebook"><i class="zmdi zmdi-facebook"></i></a></li>
-                                }
-                                @if (setting.Pinterest is not null)
-                                {
-                                    <li><a href="@setting.Pinterest"><i class="zmdi zmdi-pinterest"></i></a></li>
-                                }
-                                @if (setting.Viber is not null)
-                                {
-                                    <li><a href="@setting.Viber"><i class="zmdi zmdi-vimeo"></i></a></li>
-                                }
-                                @if (setting.Twitter is not null)
-                                {
-                                    <li><a href="@setting.Twitter"><i class="zmdi zmdi-twitter"></i></a></li>
+                                    <li><a href="@item.Link">@item.Name</a></li>
                                 }
 
 
                             </ul>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-3 col-sm-6 col-xs-12">
-                    <div class="single-widget">
-                        <h3>information</h3>
-                        <ul>
-                            @foreach (var item in information)
+                    <div class="col-md-2 col-sm-6 col-xs-12">
+                        <div class="single-widget">
+                            <h3>useful links</h3>
+                            <ul>
+                                @foreach (var item in useful)
+                                {
+                                    <li><a href="@item.Link">@item.Name</a></li>
+                                }
+
+
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 col-xs-12">
+                        <div class="single-widget">
+                            <h3>get in touch</h3>
+                            <p>@setting.Adress</p>
+                            <p>@setting.PhoneNumber</p>
+                            @if (setting.PhoneNumberSecond is not null)
                             {
-                                <li><a href="@item.Link">@item.Name</a></li>
+                                <p>@setting.PhoneNumberSecond</p>
+                            }
+                            <p>@setting.Email</p>
+                            @if (setting.EmailSecond is not null)
+                            {
+                                <p>@setting.EmailSecond</p>
                             }
 
 
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-md-2 col-sm-6 col-xs-12">
-                    <div class="single-widget">
-                        <h3>useful links</h3>
-                        <ul>
-                            @foreach (var item in useful)
-                            {
-                                <li><a href="@item.Link">@item.Name</a></li>
-                            }
 
-
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6 col-xs-12">
-                    <div class="single-widget">
-                        <h3>get in touch</h3>
-                        <p>@setting.Adress</p>
-                        <p>@setting.PhoneNumber</p>
-                        @if (setting.PhoneNumberSecond is not null)
-                        {
-                            <p>@setting.PhoneNumberSecond</p>
-                        }
-                        <p>@setting.Email</p>
-                        @if (setting.EmailSecond is not null)
-                        {
-                            <p>@setting.EmailSecond</p>
-                        }
-
-
-
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <div class="footer-bottom text-center">
-        <div class="container">
-            <div class="row">
-                <div class="col-xs-12">
-                    <p>Copyright tttt <a href="#" target="_blank">HasTech</a> 2017. All Right Reserved By Hastech.</p>
+        <div class="footer-bottom text-center">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <p>Copyright tttt <a href="#" target="_blank">HasTech</a> 2017. All Right Reserved By Hastech.</p>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</footer>
+    </footer>
+}
 <!-- Footer End -->
