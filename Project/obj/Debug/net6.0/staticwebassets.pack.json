@@ -16197,20 +16197,12 @@
       "PackagePath": "staticwebassets\\img\\banner\\banner.jpg"
     },
     {
-      "Id": "C:\\Users\\rcing\\OneDrive\\İş masası\\Project\\Project\\wwwroot\\img\\blog\\2f5ee13d-7502-47d0-9625-9744dc36a05c-blog1.jpg",
-      "PackagePath": "staticwebassets\\img\\blog\\2f5ee13d-7502-47d0-9625-9744dc36a05c-blog1.jpg"
+      "Id": "C:\\Users\\rcing\\OneDrive\\İş masası\\Project\\Project\\wwwroot\\img\\blog\\1506dcd7-44c0-4f31-ba41-7813057a93f1-footer-logo.png",
+      "PackagePath": "staticwebassets\\img\\blog\\1506dcd7-44c0-4f31-ba41-7813057a93f1-footer-logo.png"
     },
     {
-      "Id": "C:\\Users\\rcing\\OneDrive\\İş masası\\Project\\Project\\wwwroot\\img\\blog\\38ebc489-da2e-4cfa-ae16-b1f592803258-blog2.jpg",
-      "PackagePath": "staticwebassets\\img\\blog\\38ebc489-da2e-4cfa-ae16-b1f592803258-blog2.jpg"
-    },
-    {
-      "Id": "C:\\Users\\rcing\\OneDrive\\İş masası\\Project\\Project\\wwwroot\\img\\blog\\61d32dba-622a-4e49-8c07-3ce1944726a7-blog6.jpg",
-      "PackagePath": "staticwebassets\\img\\blog\\61d32dba-622a-4e49-8c07-3ce1944726a7-blog6.jpg"
-    },
-    {
-      "Id": "C:\\Users\\rcing\\OneDrive\\İş masası\\Project\\Project\\wwwroot\\img\\blog\\6af64bf6-507b-45d2-9810-41c579350834-blog3.jpg",
-      "PackagePath": "staticwebassets\\img\\blog\\6af64bf6-507b-45d2-9810-41c579350834-blog3.jpg"
+      "Id": "C:\\Users\\rcing\\OneDrive\\İş masası\\Project\\Project\\wwwroot\\img\\blog\\b5dcba49-c0f5-4d8f-80f9-0ffd88282444-footer-logo.png",
+      "PackagePath": "staticwebassets\\img\\blog\\b5dcba49-c0f5-4d8f-80f9-0ffd88282444-footer-logo.png"
     },
     {
       "Id": "C:\\Users\\rcing\\OneDrive\\İş masası\\Project\\Project\\wwwroot\\img\\blog\\blog-detail.jpg",
@@ -16255,6 +16247,14 @@
     {
       "Id": "C:\\Users\\rcing\\OneDrive\\İş masası\\Project\\Project\\wwwroot\\img\\blog\\blog9.jpg",
       "PackagePath": "staticwebassets\\img\\blog\\blog9.jpg"
+    },
+    {
+      "Id": "C:\\Users\\rcing\\OneDrive\\İş masası\\Project\\Project\\wwwroot\\img\\blog\\c3b00bff-c0c2-4cb8-aed9-4abf2d8ed931-logo.png",
+      "PackagePath": "staticwebassets\\img\\blog\\c3b00bff-c0c2-4cb8-aed9-4abf2d8ed931-logo.png"
+    },
+    {
+      "Id": "C:\\Users\\rcing\\OneDrive\\İş masası\\Project\\Project\\wwwroot\\img\\blog\\c95ea0e1-3400-4b3b-a7f3-6488885025b6-logo2.png",
+      "PackagePath": "staticwebassets\\img\\blog\\c95ea0e1-3400-4b3b-a7f3-6488885025b6-logo2.png"
     },
     {
       "Id": "C:\\Users\\rcing\\OneDrive\\İş masası\\Project\\Project\\wwwroot\\img\\choose\\choose-bd.jpg",
@@ -16401,6 +16401,10 @@
       "PackagePath": "staticwebassets\\img\\event\\8a918ea2-6e52-46e0-af1a-c260b6b5b1f4-blog9.jpg"
     },
     {
+      "Id": "C:\\Users\\rcing\\OneDrive\\İş masası\\Project\\Project\\wwwroot\\img\\event\\9091651c-fb65-4bf2-92d1-6dcb84a97693-footer-logo.png",
+      "PackagePath": "staticwebassets\\img\\event\\9091651c-fb65-4bf2-92d1-6dcb84a97693-footer-logo.png"
+    },
+    {
       "Id": "C:\\Users\\rcing\\OneDrive\\İş masası\\Project\\Project\\wwwroot\\img\\event\\91582a35-9691-4aa8-86f7-aedd2a6c5f48-teacher8.jpg",
       "PackagePath": "staticwebassets\\img\\event\\91582a35-9691-4aa8-86f7-aedd2a6c5f48-teacher8.jpg"
     },
@@ -16493,12 +16497,12 @@
       "PackagePath": "staticwebassets\\img\\event\\speaker2.jpg"
     },
     {
-      "Id": "C:\\Users\\rcing\\OneDrive\\İş masası\\Project\\Project\\wwwroot\\img\\footer\\67031f02-81f3-4561-9530-1e4860ac3b79-carousel-2.jpg",
-      "PackagePath": "staticwebassets\\img\\footer\\67031f02-81f3-4561-9530-1e4860ac3b79-carousel-2.jpg"
+      "Id": "C:\\Users\\rcing\\OneDrive\\İş masası\\Project\\Project\\wwwroot\\img\\footer\\61941fdc-e317-48a2-af52-6c5e7f5a1b4e-logo2.png",
+      "PackagePath": "staticwebassets\\img\\footer\\61941fdc-e317-48a2-af52-6c5e7f5a1b4e-logo2.png"
     },
     {
-      "Id": "C:\\Users\\rcing\\OneDrive\\İş masası\\Project\\Project\\wwwroot\\img\\footer\\9f9979aa-8fc5-4366-89ff-eeee19027b99-logo.png",
-      "PackagePath": "staticwebassets\\img\\footer\\9f9979aa-8fc5-4366-89ff-eeee19027b99-logo.png"
+      "Id": "C:\\Users\\rcing\\OneDrive\\İş masası\\Project\\Project\\wwwroot\\img\\footer\\67031f02-81f3-4561-9530-1e4860ac3b79-carousel-2.jpg",
+      "PackagePath": "staticwebassets\\img\\footer\\67031f02-81f3-4561-9530-1e4860ac3b79-carousel-2.jpg"
     },
     {
       "Id": "C:\\Users\\rcing\\OneDrive\\İş masası\\Project\\Project\\wwwroot\\img\\footer\\b48a450b-6a55-4726-8993-9a48c5f60efc-carousel-2.jpg",
@@ -16529,8 +16533,8 @@
       "PackagePath": "staticwebassets\\img\\header\\22536c33-8d83-4a6a-bb95-f846bf09e493-carousel-2.jpg"
     },
     {
-      "Id": "C:\\Users\\rcing\\OneDrive\\İş masası\\Project\\Project\\wwwroot\\img\\header\\4476cf81-677e-424c-b478-d89efa24ae8f-logo.png",
-      "PackagePath": "staticwebassets\\img\\header\\4476cf81-677e-424c-b478-d89efa24ae8f-logo.png"
+      "Id": "C:\\Users\\rcing\\OneDrive\\İş masası\\Project\\Project\\wwwroot\\img\\header\\dc15d5b4-edf4-4dc8-a2fb-52885c084882-logo2.png",
+      "PackagePath": "staticwebassets\\img\\header\\dc15d5b4-edf4-4dc8-a2fb-52885c084882-logo2.png"
     },
     {
       "Id": "C:\\Users\\rcing\\OneDrive\\İş masası\\Project\\Project\\wwwroot\\img\\header\\e111b608-bb8b-4353-9222-bba37a830ee3-carousel-2.jpg",
@@ -16605,10 +16609,6 @@
       "PackagePath": "staticwebassets\\img\\slider\\5a2c0984-61cf-474b-a6ab-d423037f30cf-teacher8.jpg"
     },
     {
-      "Id": "C:\\Users\\rcing\\OneDrive\\İş masası\\Project\\Project\\wwwroot\\img\\slider\\7859b1fe-c0b7-4513-a5ee-930bda526c0c-slider3.jpg",
-      "PackagePath": "staticwebassets\\img\\slider\\7859b1fe-c0b7-4513-a5ee-930bda526c0c-slider3.jpg"
-    },
-    {
       "Id": "C:\\Users\\rcing\\OneDrive\\İş masası\\Project\\Project\\wwwroot\\img\\slider\\80aeb18d-b64f-4d88-889b-2dc6bf8d2648-slider3.jpg",
       "PackagePath": "staticwebassets\\img\\slider\\80aeb18d-b64f-4d88-889b-2dc6bf8d2648-slider3.jpg"
     },
@@ -16643,6 +16643,10 @@
     {
       "Id": "C:\\Users\\rcing\\OneDrive\\İş masası\\Project\\Project\\wwwroot\\img\\slider\\f255e753-0e21-48fe-b3e7-f2eab04fcd71-slider2.jpg",
       "PackagePath": "staticwebassets\\img\\slider\\f255e753-0e21-48fe-b3e7-f2eab04fcd71-slider2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\rcing\\OneDrive\\İş masası\\Project\\Project\\wwwroot\\img\\slider\\f37d1b69-43b6-4b11-823f-ad36395f8103-logo2.png",
+      "PackagePath": "staticwebassets\\img\\slider\\f37d1b69-43b6-4b11-823f-ad36395f8103-logo2.png"
     },
     {
       "Id": "C:\\Users\\rcing\\OneDrive\\İş masası\\Project\\Project\\wwwroot\\img\\slider\\home.png",
@@ -16795,6 +16799,234 @@
     {
       "Id": "C:\\Users\\rcing\\OneDrive\\İş masası\\Project\\Project\\wwwroot\\js\\vendor\\modernizr-2.8.3.min.js",
       "PackagePath": "staticwebassets\\js\\vendor\\modernizr-2.8.3.min.js"
+    },
+    {
+      "Id": "C:\\Users\\rcing\\OneDrive\\İş masası\\Project\\Project\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "PackagePath": "staticwebassets\\lib\\bootstrap"
+    },
+    {
+      "Id": "C:\\Users\\rcing\\OneDrive\\İş masası\\Project\\Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
+    },
+    {
+      "Id": "C:\\Users\\rcing\\OneDrive\\İş masası\\Project\\Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
+    },
+    {
+      "Id": "C:\\Users\\rcing\\OneDrive\\İş masası\\Project\\Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
+    },
+    {
+      "Id": "C:\\Users\\rcing\\OneDrive\\İş masası\\Project\\Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\rcing\\OneDrive\\İş masası\\Project\\Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\rcing\\OneDrive\\İş masası\\Project\\Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\rcing\\OneDrive\\İş masası\\Project\\Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\rcing\\OneDrive\\İş masası\\Project\\Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\rcing\\OneDrive\\İş masası\\Project\\Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
+    },
+    {
+      "Id": "C:\\Users\\rcing\\OneDrive\\İş masası\\Project\\Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "C:\\Users\\rcing\\OneDrive\\İş masası\\Project\\Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "C:\\Users\\rcing\\OneDrive\\İş masası\\Project\\Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\rcing\\OneDrive\\İş masası\\Project\\Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\rcing\\OneDrive\\İş masası\\Project\\Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\rcing\\OneDrive\\İş masası\\Project\\Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\rcing\\OneDrive\\İş masası\\Project\\Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\rcing\\OneDrive\\İş masası\\Project\\Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
+    },
+    {
+      "Id": "C:\\Users\\rcing\\OneDrive\\İş masası\\Project\\Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
+    },
+    {
+      "Id": "C:\\Users\\rcing\\OneDrive\\İş masası\\Project\\Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "C:\\Users\\rcing\\OneDrive\\İş masası\\Project\\Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\rcing\\OneDrive\\İş masası\\Project\\Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\rcing\\OneDrive\\İş masası\\Project\\Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\rcing\\OneDrive\\İş masası\\Project\\Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\rcing\\OneDrive\\İş masası\\Project\\Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\rcing\\OneDrive\\İş masası\\Project\\Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
+    },
+    {
+      "Id": "C:\\Users\\rcing\\OneDrive\\İş masası\\Project\\Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
+    },
+    {
+      "Id": "C:\\Users\\rcing\\OneDrive\\İş masası\\Project\\Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\rcing\\OneDrive\\İş masası\\Project\\Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\rcing\\OneDrive\\İş masası\\Project\\Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\rcing\\OneDrive\\İş masası\\Project\\Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\rcing\\OneDrive\\İş masası\\Project\\Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\rcing\\OneDrive\\İş masası\\Project\\Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\rcing\\OneDrive\\İş masası\\Project\\Project\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
+    },
+    {
+      "Id": "C:\\Users\\rcing\\OneDrive\\İş masası\\Project\\Project\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "C:\\Users\\rcing\\OneDrive\\İş masası\\Project\\Project\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "C:\\Users\\rcing\\OneDrive\\İş masası\\Project\\Project\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\rcing\\OneDrive\\İş masası\\Project\\Project\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
+    },
+    {
+      "Id": "C:\\Users\\rcing\\OneDrive\\İş masası\\Project\\Project\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
+    },
+    {
+      "Id": "C:\\Users\\rcing\\OneDrive\\İş masası\\Project\\Project\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
+    },
+    {
+      "Id": "C:\\Users\\rcing\\OneDrive\\İş masası\\Project\\Project\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\rcing\\OneDrive\\İş masası\\Project\\Project\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
+    },
+    {
+      "Id": "C:\\Users\\rcing\\OneDrive\\İş masası\\Project\\Project\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
+    },
+    {
+      "Id": "C:\\Users\\rcing\\OneDrive\\İş masası\\Project\\Project\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "C:\\Users\\rcing\\OneDrive\\İş masası\\Project\\Project\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\rcing\\OneDrive\\İş masası\\Project\\Project\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\rcing\\OneDrive\\İş masası\\Project\\Project\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "C:\\Users\\rcing\\OneDrive\\İş masası\\Project\\Project\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "C:\\Users\\rcing\\OneDrive\\İş masası\\Project\\Project\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
+    },
+    {
+      "Id": "C:\\Users\\rcing\\OneDrive\\İş masası\\Project\\Project\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
+    },
+    {
+      "Id": "C:\\Users\\rcing\\OneDrive\\İş masası\\Project\\Project\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
+    },
+    {
+      "Id": "C:\\Users\\rcing\\OneDrive\\İş masası\\Project\\Project\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
+    },
+    {
+      "Id": "C:\\Users\\rcing\\OneDrive\\İş masası\\Project\\Project\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
+    },
+    {
+      "Id": "C:\\Users\\rcing\\OneDrive\\İş masası\\Project\\Project\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\rcing\\OneDrive\\İş masası\\Project\\Project\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
+    },
+    {
+      "Id": "C:\\Users\\rcing\\OneDrive\\İş masası\\Project\\Project\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
+    },
+    {
+      "Id": "C:\\Users\\rcing\\OneDrive\\İş masası\\Project\\Project\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
     },
     {
       "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.Project.Microsoft.AspNetCore.StaticWebAssets.props",

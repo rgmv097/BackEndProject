@@ -56,7 +56,7 @@ namespace Project.Areas.Admin.Controllers
             .Add(new SelectListItem(c.FullName, c.Id.ToString())));
             var viewModel = new EventCreateViewModel
             {
-                Speakers = eventSpeakersSelectList
+                Speakers = eventSpeakersSelectList,               
             };
             if (!ModelState.IsValid) return View(viewModel);
             if (!model.Image.IsImage())

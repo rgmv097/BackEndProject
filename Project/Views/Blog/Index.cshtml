@@ -22,9 +22,12 @@
             <input type="hidden" id="blogCount" value="@ViewBag.blogCount" />
             <partial name="_BlogPartial" model="Model" />
         </div>
-        <div style="text-align:center; margin-top:50px;">
-            <button id="loadMore" class="btn btn-primary btn-lg">Load More</button>
+        @if (ViewBag.blogCount > 0)
+        {
+            <div style="text-align:center; margin-top:50px;">
+                <button id="loadMore" class="btn btn-primary btn-lg">Load More</button>
         </div>
+        }
     </div>
 </div>
 <!-- Blog End -->

@@ -34,7 +34,7 @@ namespace Project.Controllers
         {
             if (skip >= _blogCount)
                 return BadRequest();
-            var blogs = await _dbContext.Blogs.Skip(skip).Take(4).ToListAsync();
+            var blogs = await _dbContext.Blogs.Skip(skip).Take(3).ToListAsync();
             return PartialView("_BlogPartial",blogs);
         }
     }

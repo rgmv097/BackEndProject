@@ -26,8 +26,8 @@ namespace Project.Areas.Admin.Controllers
 
         public async Task<IActionResult> Create()
         {
-            var contact = await _dbContext.Settings.FirstOrDefaultAsync();
-            if (contact is not null)
+            var setting = await _dbContext.Settings.FirstOrDefaultAsync();
+            if (setting is not null)
             {
                 return RedirectToAction(nameof(Index));
             }
