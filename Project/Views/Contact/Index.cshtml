@@ -68,6 +68,7 @@
                     <h3>LEAVE A message</h3>
                     <p>@contact.Message </p>
                     <form asp-controller="contact" asp-action="sendmessage" method="post">
+                        <div asp-validation-summary="All"><span></span></div>
                         <div class="row">
                             <div class="col-md-12">
                                 <p>Name</p>
